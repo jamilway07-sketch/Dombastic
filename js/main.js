@@ -25,6 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
   if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeDrawer);
 
+  // Close drawer on clicking any navigation link
+  document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+    link.addEventListener('click', closeDrawer);
+  });
+
   // 2. Search Modal Toggle
   const openSearchBtn = document.getElementById('openSearchBtn');
   const closeSearchBtn = document.getElementById('closeSearchBtn');
