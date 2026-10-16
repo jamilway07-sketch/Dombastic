@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - Dombastis Peternakan Domba Modern</title>
+  <meta name="description" content="Kenali lebih dekat Dombastis: peternakan domba modern di Jombang dengan standar pakan silase, kandang panggung higienis, dan program kemitraan berkelanjutan.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230F3E2E'/><path d='M35 40c0-10 12-12 15-4 3-8 15-6 15 4 0 14-15 28-15 28s-15-14-15-28z' fill='%23FFFFFF'/></svg>">
+  <style>
+    .about-story-section {
+      padding: 80px 0;
+    }
+    .about-story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .about-lead-quote {
+      border-left: 4px solid var(--accent-mint);
+      padding-left: 20px;
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--primary-forest);
+      font-weight: 500;
+    }
+    .vision-mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .vm-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-sm);
+    }
+    .vm-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: var(--primary-deep);
+    }
+    .vm-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--primary-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mission-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .mission-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+    .mission-item svg {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      color: var(--accent-mint);
+      margin-top: 2px;
+    }
+    .facilities-section {
+      background: var(--accent-tint);
+      padding: 80px 0;
+    }
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .facility-box {
+      background: var(--bg-card);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+    }
+    .facility-box:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+    .facility-box img {
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .facility-body {
+      padding: 20px;
+    }
+    .facility-body h4 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      color: var(--primary-deep);
+    }
+    .facility-body p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary-deep), var(--primary-green));
+      color: var(--text-white);
+      border-radius: var(--radius-xl);
+      padding: 56px 40px;
+      text-align: center;
+      margin: 80px 0;
+    }
+    @media (max-width: 900px) {
+      .about-story-grid, .vision-mission-grid {
+        grid-template-columns: 1fr;
+      }
+      .facilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .facilities-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigasi Utama">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" fill="#0F3E2E"/>
+              <path d="M7 11c1-3 3-4 5-4s4 1 5 4c0 3-2 6-5 6s-5-3-5-6z" fill="#FFFFFF"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Dombastis</span>
+            <span class="brand-tagline">Peternakan Domba</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Beranda</a></li>
+          <li><a href="tentang-kami.html" class="nav-link active">Tentang Kami</a></li>
+          <li><a href="layanan.html" class="nav-link">Layanan</a></li>
+          <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <button class="btn-search" id="openSearchBtn" aria-label="Buka Pencarian">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <a href="kontak.html" class="btn btn-header-cta">Hubungi Kami</a>
+          <button class="btn-hamburger" id="hamburgerBtn" aria-label="Menu Mobile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" fill="#0F3E2E"/><path d="M7 11c1-3 3-4 5-4s4 1 5 4c0 3-2 6-5 6s-5-3-5-6z" fill="#FFFFFF"/></svg></div>
+        <div class="brand-text"><span class="brand-name">Dombastis</span><span class="brand-tagline">Peternakan Domba</span></div>
+      </div>
+      <button class="btn-close-drawer" id="closeDrawerBtn">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Beranda</a>
+      <a href="tentang-kami.html" class="active">Tentang Kami</a>
+      <a href="layanan.html">Layanan</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="blog.html">Blog</a>
+      <a href="kontak.html">Kontak & Lokasi</a>
+    </div>
+  </aside>
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-box">
+      <button class="search-modal-close" id="closeSearchBtn">&times;</button>
+      <div class="search-input-group">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="searchInput" placeholder="Cari layanan, bibit domba, artikel...">
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Inner Hero -->
+    <section class="inner-hero">
+      <div class="container">
+        <div class="inner-hero-content">
+          <span class="inner-hero-eyebrow">Mengenal Dombastis</span>
+          <h1 class="inner-hero-title">Tentang Peternakan Kami</h1>
+          <p class="inner-hero-subtitle">
+            Dombastis dibangun dari kecintaan terhadap dunia peternakan dan tekad menghadirkan bibit domba unggul dengan tata kelola profesional dan amanah.
+          </p>
+          <div class="breadcrumb">
+            <a href="index.html">Beranda</a>
+            <span>&bull;</span>
+            <span>Tentang Kami</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="about-story-section">
+      <div class="container">
+        <div class="about-story-grid">
+          <div>
+            <span class="section-eyebrow">Kisah Kami</span>
+            <h2 class="section-title">Dedikasi untuk Kemajuan Peternakan Domba Nasional</h2>
+            <p class="section-desc">
+              Berawal dari lahan sederhana di Jombang, Jawa Timur, Dombastis dirintis dengan sebuah visi besar: mengubah paradigma peternakan domba tradisional menjadi industri modern yang higienis, terukur, dan menguntungkan bagi semua pihak.
+            </p>
+            <blockquote class="about-lead-quote">
+              "Peternakan domba bukan hanya tentang jual beli ternak, melainkan membangun rantai ketahanan pangan dan kesejahteraan peternak Indonesia."
+            </blockquote>
+            <p class="section-desc">
+              Kami menggabungkan metode pemuliaan genetika modern (Dorper, Cross Texel, Merino), sistem kandang panggung ramah lingkungan, serta formula pakan silase terfermentasi untuk menghasilkan pertumbuhan bobot (ADG) yang optimal tanpa antibiotik berbahaya.
+            </p>
+          </div>
+
+          <div class="hero-visual-wrapper">
+            <div class="hero-image-frame">
+              <img src="https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&w=1000&q=80" alt="Peternakan Modern Dombastis">
+            </div>
+          </div>
+        </div>
+
+        <!-- Visi & Misi -->
+        <div class="vision-mission-grid">
+          <div class="vm-card">
+            <h3>
+              <span class="vm-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </span>
+              Visi Kami
+            </h3>
+            <p style="color: var(--text-muted); line-height: 1.7;">
+              Menjadi pusat pembibitan domba unggul dan model peternakan terintegrasi nomor satu di Indonesia yang menjunjung tinggi amanah, kualitas, serta keberlanjutan ekonomi peternak mitra.
+            </p>
+          </div>
+
+          <div class="vm-card">
+            <h3>
+              <span class="vm-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </span>
+              Misi Kami
+            </h3>
+            <div class="mission-list">
+              <div class="mission-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Menghasilkan bibit domba unggul bebas penyakit dengan pencatatan genetika (record breeding) yang ketat.</span>
+              </div>
+              <div class="mission-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Membuka program kemitraan ternak berbasis syariah yang transparan dan saling menguntungkan.</span>
+              </div>
+              <div class="mission-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Menerapkan standar animal welfare, pakan bermutu tinggi, dan biosekuriti ketat di setiap fasilitas farm.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="facilities-section">
+      <div class="container">
+        <div class="section-header" style="justify-content: center; text-align: center;">
+          <div>
+            <span class="section-eyebrow">Standar Infrastruktur</span>
+            <h2 class="section-title">Fasilitas Peternakan Modern</h2>
+            <p class="section-desc" style="max-width: 600px; margin: 0 auto;">
+              Kami menginvestasikan infrastruktur peternakan terbaik untuk memastikan kenyamanan domba dan efisiensi operasional.
+            </p>
+          </div>
+        </div>
+
+        <div class="facilities-grid">
+          <div class="facility-box">
+            <img src="https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&w=600&q=80" alt="Kandang Panggung">
+            <div class="facility-body">
+              <h4>Kandang Panggung Higienis</h4>
+              <p>Sirkulasi udara optimal dan lantai kayu slatted memudahkan pembuangan kotoran secara higienis.</p>
+            </div>
+          </div>
+
+          <div class="facility-box">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="Bank Pakan Silase">
+            <div class="facility-body">
+              <h4>Bank Pakan Mandiri</h4>
+              <p>Produksi pakan silase fermentasi dan konsentrat berprotein tinggi teruji laboratorium nutrisi.</p>
+            </div>
+          </div>
+
+          <div class="facility-box">
+            <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=600&q=80" alt="Klinik Kesehatan Hewan">
+            <div class="facility-body">
+              <h4>Klinik & Karantina Medis</h4>
+              <p>Pemantauan rutin oleh dokter hewan berlisensi, vaksinasi berkala, dan penimbangan digital.</p>
+            </div>
+          </div>
+
+          <div class="facility-box">
+            <img src="https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=600&q=80" alt="RPH Standar Halal">
+            <div class="facility-body">
+              <h4>RPH Bersertifikat Halal</h4>
+              <p>Fasilitas pemotongan dan pengolahan karkas higienis sesuai syariat Islam dan uji lab berkala.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner CTA -->
+        <div class="cta-banner">
+          <h2 style="color: #FFFFFF; font-size: 2.2rem; margin-bottom: 16px;">Ingin Berkunjung Langsung ke Farm Kami?</h2>
+          <p style="color: rgba(255,255,255,0.9); max-width: 650px; margin: 0 auto 28px; font-size: 1.05rem;">
+            Kami membuka pintu farm untuk calon mitra, peternak pemula, dan pembeli domba qurban/aqiqah. Jadwalkan kunjungan Anda bersama tim kami.
+          </p>
+          <a href="kontak.html" class="btn btn-outline-white btn-lg">Jadwalkan Kunjungan Farm</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <div class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" fill="#0F3E2E"/><path d="M7 11c1-3 3-4 5-4s4 1 5 4c0 3-2 6-5 6s-5-3-5-6z" fill="#FFFFFF"/></svg></div>
+            <div class="brand-text"><span class="brand-name">Dombastis</span><span class="brand-tagline">Peternakan Domba</span></div>
+          </a>
+          <p class="footer-about-text">Dombastis hadir untuk menjadi mitra terbaik dalam pengembangan peternakan domba di Indonesia.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://instagram.com" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="https://youtube.com" class="social-btn" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#0B3525"/></svg></a>
+            <a href="https://tiktok.com" class="social-btn" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.12V9.38a6.37 6.37 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.64a6.34 6.34 0 0 0 10.82 4.5 6.27 6.27 0 0 0 1.96-4.54V9.08a8.28 8.28 0 0 0 4.81 1.54V7.17a4.84 4.84 0 0 1-1-.48z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigasi</h4>
+          <ul class="footer-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang-kami.html">Tentang Kami</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Layanan</h4>
+          <ul class="footer-menu">
+            <li><a href="layanan.html#jual-beli">Jual Beli Domba</a></li>
+            <li><a href="layanan.html#mitra-ternak">Mitra Ternak</a></li>
+            <li><a href="layanan.html#titip-ternak">Titip Ternak Domba</a></li>
+            <li><a href="layanan.html#daging-domba">Daging Domba</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kontak Kami</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+62 812 3456 7890</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>info@dombastis.id</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Jombang, Jawa Timur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2025 Dombastis. All rights reserved.</div>
+        <div>Peternakan Domba, Solusi Masa Depan</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

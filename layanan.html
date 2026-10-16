@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layanan - Dombastis Jual Beli, Mitra Ternak & Daging Domba</title>
+  <meta name="description" content="Layanan lengkap Dombastis: Jual Beli bibit domba Dorper, Texel, Merino, program kemitraan bagi hasil syariah, titip ternak terpercaya, serta daging domba segar halal.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230F3E2E'/><path d='M35 40c0-10 12-12 15-4 3-8 15-6 15 4 0 14-15 28-15 28s-15-14-15-28z' fill='%23FFFFFF'/></svg>">
+  <style>
+    .service-detail-section {
+      padding: 70px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .service-detail-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .service-detail-grid.reverse {
+      grid-template-columns: 1fr 1.1fr;
+    }
+    .service-badge {
+      display: inline-block;
+      padding: 4px 14px;
+      background: var(--accent-soft);
+      color: var(--primary-green);
+      font-weight: 700;
+      border-radius: var(--radius-pill);
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .feature-checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 24px 0 32px;
+    }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+    .check-item svg {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      color: var(--accent-mint);
+      margin-top: 2px;
+    }
+
+    /* Calculator Section */
+    .calculator-section {
+      background: linear-gradient(180deg, var(--bg-page) 0%, var(--accent-tint) 100%);
+      padding: 80px 0;
+    }
+    .calc-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-lg);
+      padding: 48px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+      background: var(--bg-page);
+      font-size: 1rem;
+      color: var(--text-main);
+      transition: border-color var(--transition-fast);
+    }
+    .form-control:focus {
+      border-color: var(--primary-green);
+      background: #FFFFFF;
+    }
+    .calc-result-box {
+      background: var(--primary-deep);
+      color: var(--text-white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      box-shadow: var(--shadow-md);
+    }
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      padding-bottom: 12px;
+    }
+    .result-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .result-val {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #72D5A3;
+    }
+
+    @media (max-width: 868px) {
+      .service-detail-grid, .service-detail-grid.reverse, .calc-grid {
+        grid-template-columns: 1fr;
+      }
+      .calc-card {
+        padding: 28px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigasi Utama">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" fill="#0F3E2E"/>
+              <path d="M7 11c1-3 3-4 5-4s4 1 5 4c0 3-2 6-5 6s-5-3-5-6z" fill="#FFFFFF"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Dombastis</span>
+            <span class="brand-tagline">Peternakan Domba</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Beranda</a></li>
+          <li><a href="tentang-kami.html" class="nav-link">Tentang Kami</a></li>
+          <li><a href="layanan.html" class="nav-link active">Layanan</a></li>
+          <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <button class="btn-search" id="openSearchBtn" aria-label="Buka Pencarian">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <a href="kontak.html" class="btn btn-header-cta">Hubungi Kami</a>
+          <button class="btn-hamburger" id="hamburgerBtn" aria-label="Menu Mobile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" fill="#0F3E2E"/><path d="M7 11c1-3 3-4 5-4s4 1 5 4c0 3-2 6-5 6s-5-3-5-6z" fill="#FFFFFF"/></svg></div>
+        <div class="brand-text"><span class="brand-name">Dombastis</span><span class="brand-tagline">Peternakan Domba</span></div>
+      </div>
+      <button class="btn-close-drawer" id="closeDrawerBtn">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Beranda</a>
+      <a href="tentang-kami.html">Tentang Kami</a>
+      <a href="layanan.html" class="active">Layanan</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="blog.html">Blog</a>
+      <a href="kontak.html">Kontak & Lokasi</a>
+    </div>
+  </aside>
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-box">
+      <button class="search-modal-close" id="closeSearchBtn">&times;</button>
+      <div class="search-input-group">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="searchInput" placeholder="Cari layanan, bibit domba, artikel...">
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Inner Hero -->
+    <section class="inner-hero">
+      <div class="container">
+        <div class="inner-hero-content">
+          <span class="inner-hero-eyebrow">Solusi Terpadu</span>
+          <h1 class="inner-hero-title">Layanan Peternakan Kami</h1>
+          <p class="inner-hero-subtitle">
+            Dombastis menyediakan ekosistem terlengkap untuk jual beli bibit domba, kemitraan modal, titip perawatan, dan pasokan daging domba segar halal.
+          </p>
+          <div class="breadcrumb">
+            <a href="index.html">Beranda</a>
+            <span>&bull;</span>
+            <span>Layanan</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detail 1: Jual Beli Domba -->
+    <section class="service-detail-section" id="jual-beli">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div>
+            <span class="service-badge">Layanan Utama</span>
+            <h2 class="section-title">Jual Beli Domba Unggulan</h2>
+            <p class="section-desc">
+              Kami menyediakan bibit domba unggul (Dorper, Cross Texel, Merino) mulai dari anakan (cempe), bakalan penggemukan, indukan produktif, hingga pejantan siap kawin dengan sertifikasi kesehatan resmi.
+            </p>
+            <div class="feature-checklist">
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Garansi kesehatan 7 hari dan bukti vaksinasi lengkap dari dokter hewan.</span>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Pencatatan silsilah genetika untuk bibit unggul Dorper & Texel.</span>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Pengiriman armada khusus hewan ke seluruh Pulau Jawa dengan aman.</span>
+              </div>
+            </div>
+            <a href="kontak.html?subject=Jual+Beli+Domba" class="btn btn-primary">Pesan Domba Sekarang</a>
+          </div>
+
+          <div class="hero-visual-wrapper">
+            <div class="hero-image-frame">
+              <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=800&q=80" alt="Jual Beli Bibit Domba Unggul">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detail 2: Mitra Ternak -->
+    <section class="service-detail-section" id="mitra-ternak">
+      <div class="container">
+        <div class="service-detail-grid reverse">
+          <div class="hero-visual-wrapper">
+            <div class="hero-image-frame">
+              <img src="https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&w=800&q=80" alt="Kemitraan Ternak Domba Modern">
+            </div>
+          </div>
+
+          <div>
+            <span class="service-badge">Kemitraan Syariah</span>
+            <h2 class="section-title">Mitra Ternak & Bagi Hasil</h2>
+            <p class="section-desc">
+              Peluang investasi sektor riil peternakan domba dengan sistem akad syariah (Mudharabah/Musyarakah). Anda tidak perlu repot mencari pakan atau membersihkan kandang—seluruh tata kelola dijalankan profesional oleh tim Dombastis.
+            </p>
+            <div class="feature-checklist">
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Bagi hasil keuntungan riil dengan estimasi imbal hasil 18% - 35% per periode.</span>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Laporan perkembangan bobot timbang mingguan melalui dashboard/WhatsApp.</span>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Mitigasi risiko kematian dengan asuransi/replacement bibit setara.</span>
+              </div>
+            </div>
+            <a href="#kalkulator-investasi" class="btn btn-primary">Hitung Estimasi Bagi Hasil &darr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detail 3: Titip Ternak Domba -->
+    <section class="service-detail-section" id="titip-ternak">
+      <div class="container">
+        <div class="service-detail-grid">
+          <div>
+            <span class="service-badge">Perawatan Terjamin</span>
+            <h2 class="section-title">Titip Rawat Ternak Domba</h2>
+            <p class="section-desc">
+              Punya domba qurban, indukan, atau koleksi bibit tapi tidak memiliki lahan dan waktu untuk merawatnya? Titipkan di kandang Dombastis dengan fasilitas pakan silase kualitas premium dan pemantauan dokter hewan.
+            </p>
+            <div class="feature-checklist">
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Kandang panggung bersih, sanitasi terjaga, bebas bau dan lalat.</span>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Pakan konsentrat terstandar plus hijauan segar terfermentasi.</span>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Dapat dikunjungi sewaktu-waktu oleh pemilik setiap hari kerja.</span>
+              </div>
+            </div>
+            <a href="kontak.html?subject=Titip+Ternak+Domba" class="btn btn-primary">Konsultasi Titip Ternak</a>
+          </div>
+
+          <div class="hero-visual-wrapper">
+            <div class="hero-image-frame">
+              <img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?auto=format&fit=crop&w=800&q=80" alt="Jasa Titip Ternak Domba">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detail 4: Daging Domba Segar -->
+    <section class="service-detail-section" id="daging-domba">
+      <div class="container">
+        <div class="service-detail-grid reverse">
+          <div class="hero-visual-wrapper">
+            <div class="hero-image-frame">
+              <img src="https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=800&q=80" alt="Daging Domba Halal Segar">
+            </div>
+          </div>
+
+          <div>
+            <span class="service-badge">Halal & Higienis</span>
+            <h2 class="section-title">Daging Domba Segar & Aqiqah</h2>
+            <p class="section-desc">
+              Menyediakan karkas domba segar, potongan prime cut (lamb rack, chop, shank, diced meat) untuk restoran, katering, hotel, maupun kebutuhan Aqiqah dan Qurban siap masak atau matang.
+            </p>
+            <div class="feature-checklist">
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>100% Halal disembelih oleh Juleha (Juru Sembelih Halal) tersertifikasi.</span>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Daging empuk, tidak prengus karena pola pakan terkontrol dan umur potong ideal.</span>
+              </div>
+              <div class="check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Kemasan vakum food-grade dengan rantai dingin (cold storage).</span>
+              </div>
+            </div>
+            <a href="kontak.html?subject=Order+Daging+Domba" class="btn btn-primary">Pesan Daging / Aqiqah</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: SIMULASI KALKULATOR MITRA -->
+    <section class="calculator-section" id="kalkulator-investasi">
+      <div class="container">
+        <div class="section-header" style="justify-content: center; text-align: center;">
+          <div>
+            <span class="section-eyebrow">Simulasi Bisnis</span>
+            <h2 class="section-title">Kalkulator Kemitraan Ternak Domba</h2>
+            <p class="section-desc" style="max-width: 640px; margin: 0 auto;">
+              Hitung proyeksi modal dan estimasi hasil panen kemitraan penggemukan domba modern di Dombastis.
+            </p>
+          </div>
+        </div>
+
+        <div class="calc-card">
+          <div class="calc-grid">
+            <!-- Inputs -->
+            <div>
+              <div class="form-group">
+                <label class="form-label" for="calcQty">Jumlah Domba (Ekor):</label>
+                <input type="number" id="calcQty" class="form-control" value="5" min="1" max="100">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="calcBreed">Jenis Bibit Domba:</label>
+                <select id="calcBreed" class="form-control">
+                  <option value="3200000" selected>Dorper (Bibit Super) - Rp 3.200.000 / ekor</option>
+                  <option value="2700000">Cross Texel (Pedaging Unggul) - Rp 2.700.000 / ekor</option>
+                  <option value="2500000">Merino Cross - Rp 2.500.000 / ekor</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="calcPeriod">Durasi Program Kemitraan:</label>
+                <select id="calcPeriod" class="form-control">
+                  <option value="4">4 Bulan (Penggemukan Kilat)</option>
+                  <option value="6" selected>6 Bulan (Standar Optimal)</option>
+                  <option value="12">12 Bulan (Breeding & Pembesaran)</option>
+                </select>
+              </div>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">
+                *Perhitungan sudah mencakup pakan silase konsentrat, perawatan medis, dan kandang panggung.
+              </p>
+            </div>
+
+            <!-- Results -->
+            <div class="calc-result-box">
+              <h3 style="color: #FFFFFF; font-size: 1.25rem;">Estimasi Hasil Panen</h3>
+
+              <div class="result-row">
+                <span style="font-size: 0.9rem; opacity: 0.85;">Total Modal Terpadu:</span>
+                <span class="result-val" id="resultCapital" style="color: #FFFFFF;">Rp 21.400.000</span>
+              </div>
+
+              <div class="result-row">
+                <span style="font-size: 0.9rem; opacity: 0.85;">Proyeksi Nilai Jual Panen:</span>
+                <span class="result-val" id="resultReturn">Rp 26.108.000</span>
+              </div>
+
+              <div class="result-row">
+                <span style="font-size: 0.9rem; opacity: 0.85;">Estimasi Keuntungan Bersih:</span>
+                <span class="result-val" id="resultNetProfit">+ Rp 4.708.000</span>
+              </div>
+
+              <a href="kontak.html?subject=Kemitraan+Ternak" class="btn btn-primary" style="background: #FFFFFF; color: var(--primary-deep); margin-top: 10px;">
+                Mulai Kemitraan Sekarang
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <div class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" fill="#0F3E2E"/><path d="M7 11c1-3 3-4 5-4s4 1 5 4c0 3-2 6-5 6s-5-3-5-6z" fill="#FFFFFF"/></svg></div>
+            <div class="brand-text"><span class="brand-name">Dombastis</span><span class="brand-tagline">Peternakan Domba</span></div>
+          </a>
+          <p class="footer-about-text">Dombastis hadir untuk menjadi mitra terbaik dalam pengembangan peternakan domba di Indonesia.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://instagram.com" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="https://youtube.com" class="social-btn" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#0B3525"/></svg></a>
+            <a href="https://tiktok.com" class="social-btn" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.12V9.38a6.37 6.37 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.64a6.34 6.34 0 0 0 10.82 4.5 6.27 6.27 0 0 0 1.96-4.54V9.08a8.28 8.28 0 0 0 4.81 1.54V7.17a4.84 4.84 0 0 1-1-.48z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigasi</h4>
+          <ul class="footer-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang-kami.html">Tentang Kami</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Layanan</h4>
+          <ul class="footer-menu">
+            <li><a href="layanan.html#jual-beli">Jual Beli Domba</a></li>
+            <li><a href="layanan.html#mitra-ternak">Mitra Ternak</a></li>
+            <li><a href="layanan.html#titip-ternak">Titip Ternak Domba</a></li>
+            <li><a href="layanan.html#daging-domba">Daging Domba</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kontak Kami</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+62 812 3456 7890</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>info@dombastis.id</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Jombang, Jawa Timur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2025 Dombastis. All rights reserved.</div>
+        <div>Peternakan Domba, Solusi Masa Depan</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

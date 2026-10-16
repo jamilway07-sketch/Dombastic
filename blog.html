@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Artikel - Dombastis Edukasi & Bisnis Domba Modern</title>
+  <meta name="description" content="Kumpulan artikel edukasi peternakan domba, tips budidaya bibit Dorper dan Texel, manajemen pakan silase, serta peluang bisnis kemitraan ternak domba.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230F3E2E'/><path d='M35 40c0-10 12-12 15-4 3-8 15-6 15 4 0 14-15 28-15 28s-15-14-15-28z' fill='%23FFFFFF'/></svg>">
+  <style>
+    .blog-page-section {
+      padding: 60px 0 90px;
+    }
+    .featured-article {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-light);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      margin-bottom: 56px;
+      transition: all var(--transition-normal);
+    }
+    .featured-article:hover {
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent-mint);
+    }
+    .featured-media {
+      height: 360px;
+      overflow: hidden;
+    }
+    .featured-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-smooth);
+    }
+    .featured-article:hover .featured-media img {
+      transform: scale(1.04);
+    }
+    .featured-content {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .blog-filter-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .blog-category-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .blog-pill {
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-body);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .blog-pill.active, .blog-pill:hover {
+      background: var(--primary-dark);
+      color: var(--text-white);
+      border-color: var(--primary-dark);
+    }
+    .blog-search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-pill);
+      padding: 6px 16px;
+      width: 280px;
+    }
+    .blog-search-box input {
+      width: 100%;
+      background: transparent;
+      font-size: 0.88rem;
+      padding: 4px;
+    }
+    .newsletter-section {
+      background: var(--primary-deep);
+      color: var(--text-white);
+      border-radius: var(--radius-xl);
+      padding: 56px 40px;
+      text-align: center;
+      margin-top: 80px;
+    }
+    .newsletter-form {
+      display: flex;
+      max-width: 500px;
+      margin: 28px auto 0;
+      gap: 12px;
+    }
+    .newsletter-input {
+      flex: 1;
+      padding: 14px 20px;
+      border-radius: var(--radius-pill);
+      background: #FFFFFF;
+      color: var(--text-main);
+    }
+    @media (max-width: 868px) {
+      .featured-article {
+        grid-template-columns: 1fr;
+      }
+      .featured-media {
+        height: 240px;
+      }
+      .featured-content {
+        padding: 24px;
+      }
+      .blog-search-box {
+        width: 100%;
+      }
+      .newsletter-form {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigasi Utama">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" fill="#0F3E2E"/><path d="M7 11c1-3 3-4 5-4s4 1 5 4c0 3-2 6-5 6s-5-3-5-6z" fill="#FFFFFF"/></svg></div>
+          <div class="brand-text"><span class="brand-name">Dombastis</span><span class="brand-tagline">Peternakan Domba</span></div>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Beranda</a></li>
+          <li><a href="tentang-kami.html" class="nav-link">Tentang Kami</a></li>
+          <li><a href="layanan.html" class="nav-link">Layanan</a></li>
+          <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+          <li><a href="blog.html" class="nav-link active">Blog</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <button class="btn-search" id="openSearchBtn" aria-label="Buka Pencarian">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </button>
+          <a href="kontak.html" class="btn btn-header-cta">Hubungi Kami</a>
+          <button class="btn-hamburger" id="hamburgerBtn" aria-label="Menu Mobile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" fill="#0F3E2E"/><path d="M7 11c1-3 3-4 5-4s4 1 5 4c0 3-2 6-5 6s-5-3-5-6z" fill="#FFFFFF"/></svg></div>
+        <div class="brand-text"><span class="brand-name">Dombastis</span><span class="brand-tagline">Peternakan Domba</span></div>
+      </div>
+      <button class="btn-close-drawer" id="closeDrawerBtn">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Beranda</a>
+      <a href="tentang-kami.html">Tentang Kami</a>
+      <a href="layanan.html">Layanan</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="kontak.html">Kontak & Lokasi</a>
+    </div>
+  </aside>
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-box">
+      <button class="search-modal-close" id="closeSearchBtn">&times;</button>
+      <div class="search-input-group">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="searchInput" placeholder="Cari layanan, bibit domba, artikel...">
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Inner Hero -->
+    <section class="inner-hero">
+      <div class="container">
+        <div class="inner-hero-content">
+          <span class="inner-hero-eyebrow">Pusat Edukasi & Inspirasi</span>
+          <h1 class="inner-hero-title">Blog Peternakan Dombastis</h1>
+          <p class="inner-hero-subtitle">
+            Dapatkan informasi terbaru, panduan teknis perawatan domba, analisa pakan silase, dan peluang kemitraan bisnis ternak.
+          </p>
+          <div class="breadcrumb">
+            <a href="index.html">Beranda</a>
+            <span>&bull;</span>
+            <span>Blog & Artikel</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Blog Section -->
+    <section class="blog-page-section">
+      <div class="container">
+        <!-- Featured Article -->
+        <article class="featured-article">
+          <div class="featured-media">
+            <img src="https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?auto=format&fit=crop&w=1200&q=80" alt="Panduan Merawat Domba">
+          </div>
+          <div class="featured-content">
+            <span class="article-category-tag" style="position: static; display: inline-block; width: fit-content; margin-bottom: 14px;">Artikel Pilihan &bull; Tips Peternakan</span>
+            <h2 style="font-size: 1.85rem; margin-bottom: 14px; line-height: 1.3;">Cara Merawat Domba Agar Tetap Sehat dan Produktif</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.6;">
+              Manajemen kandang panggung, sanitasi air minum, dan rasio pemberian konsentrat merupakan kunci utama agar bobot domba melonjak optimal tanpa stres lingkungan.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">
+              <span style="color: var(--text-muted);">12 Oktober 2025 &bull; 5 Menit Baca</span>
+              <a href="#article-1" class="btn btn-primary btn-sm">Baca Selengkapnya &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Category & Search Bar -->
+        <div class="blog-filter-bar">
+          <div class="blog-category-pills">
+            <button class="blog-pill active">Semua</button>
+            <button class="blog-pill">Tips Peternakan</button>
+            <button class="blog-pill">Info Usaha</button>
+            <button class="blog-pill">Edukasi Ras</button>
+            <button class="blog-pill">Pakan & Nutrisi</button>
+          </div>
+          <div class="blog-search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px; height: 18px; color: var(--text-muted); margin-right: 8px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" placeholder="Cari judul artikel...">
+          </div>
+        </div>
+
+        <!-- Blog Grid (6 Articles) -->
+        <div class="articles-grid">
+          <!-- Card 1 -->
+          <article class="article-card" id="article-1">
+            <div class="article-media">
+              <img src="https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?auto=format&fit=crop&w=800&q=80" alt="Cara Merawat Domba">
+              <span class="article-category-tag">Tips Peternakan</span>
+            </div>
+            <div class="article-content">
+              <h3 class="article-title">Cara Merawat Domba Agar Tetap Sehat dan Produktif</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+                Langkah demi langkah menyusun jadwal vaksinasi, pembersihan kandang berkala, dan penanganan kuku ternak.
+              </p>
+              <div class="article-footer">
+                <span class="article-date">12 Oktober 2025</span>
+                <span class="article-link">Baca Selengkapnya &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="article-card">
+            <div class="article-media">
+              <img src="https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&w=800&q=80" alt="Peluang Bisnis Domba">
+              <span class="article-category-tag">Info Usaha</span>
+            </div>
+            <div class="article-content">
+              <h3 class="article-title">Peluang Bisnis Domba di Tahun 2025</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+                Analisa pasar daging domba premium, aqiqah, dan proyeksi permintaan hari raya kurban masa kini.
+              </p>
+              <div class="article-footer">
+                <span class="article-date">9 Oktober 2025</span>
+                <span class="article-link">Baca Selengkapnya &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="article-card">
+            <div class="article-media">
+              <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=800&q=80" alt="Perbedaan Dorper, Texel dan Merino">
+              <span class="article-category-tag">Edukasi Ras</span>
+            </div>
+            <div class="article-content">
+              <h3 class="article-title">Perbedaan Dorper, Cross Texel, dan Merino</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+                Memilih jenis domba yang tepat untuk program fattening (penggemukan) vs breeding (pemuliaan bibit).
+              </p>
+              <div class="article-footer">
+                <span class="article-date">5 Oktober 2025</span>
+                <span class="article-link">Baca Selengkapnya &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="article-card">
+            <div class="article-media">
+              <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Pakan Silase Domba">
+              <span class="article-category-tag">Pakan & Nutrisi</span>
+            </div>
+            <div class="article-content">
+              <h3 class="article-title">Resep Rahasia Silase Fermentasi Bobot Cepat Naik</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+                Cara fermentasi rumput odot dan tebon jagung dengan probiotik untuk menekan FCR dan biaya pakan.
+              </p>
+              <div class="article-footer">
+                <span class="article-date">28 September 2025</span>
+                <span class="article-link">Baca Selengkapnya &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="article-card">
+            <div class="article-media">
+              <img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?auto=format&fit=crop&w=800&q=80" alt="Desain Kandang Domba">
+              <span class="article-category-tag">Tips Peternakan</span>
+            </div>
+            <div class="article-content">
+              <h3 class="article-title">Standar Kandang Panggung Anti Bau dan Lalat</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+                Ketinggian kolong kandang, jarak celah lantai kayu, dan saluran pemisah urin serta kotoran padat.
+              </p>
+              <div class="article-footer">
+                <span class="article-date">20 September 2025</span>
+                <span class="article-link">Baca Selengkapnya &rarr;</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="article-card">
+            <div class="article-media">
+              <img src="https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=800&q=80" alt="Daging Domba Halal">
+              <span class="article-category-tag">Info Usaha</span>
+            </div>
+            <div class="article-content">
+              <h3 class="article-title">Mitos & Fakta: Rahasia Daging Domba Empuk Bebas Bau</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">
+                Mengapa domba pakan silase menghasilkan tekstur daging juicy tanpa aroma prengus menyengat.
+              </p>
+              <div class="article-footer">
+                <span class="article-date">14 September 2025</span>
+                <span class="article-link">Baca Selengkapnya &rarr;</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Newsletter Subscription Box -->
+        <div class="newsletter-section">
+          <h2 style="color: #FFFFFF; font-size: 2rem; margin-bottom: 12px;">Dapatkan Update Tips Peternakan Setiap Minggu</h2>
+          <p style="color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto; font-size: 0.98rem;">
+            Berlangganan newsletter Dombastis gratis untuk menerima analisa pasar harga domba dan info pembagian dividen mitra.
+          </p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Terima kasih telah berlangganan newsletter Dombastis!');">
+            <input type="email" placeholder="Masukkan alamat email Anda" class="newsletter-input" required>
+            <button type="submit" class="btn btn-primary" style="background: var(--accent-mint); color: var(--primary-deep); font-weight: 700;">
+              Langganan
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <div class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" fill="#0F3E2E"/><path d="M7 11c1-3 3-4 5-4s4 1 5 4c0 3-2 6-5 6s-5-3-5-6z" fill="#FFFFFF"/></svg></div>
+            <div class="brand-text"><span class="brand-name">Dombastis</span><span class="brand-tagline">Peternakan Domba</span></div>
+          </a>
+          <p class="footer-about-text">Dombastis hadir untuk menjadi mitra terbaik dalam pengembangan peternakan domba di Indonesia.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://instagram.com" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="https://youtube.com" class="social-btn" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#0B3525"/></svg></a>
+            <a href="https://tiktok.com" class="social-btn" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.12V9.38a6.37 6.37 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.64a6.34 6.34 0 0 0 10.82 4.5 6.27 6.27 0 0 0 1.96-4.54V9.08a8.28 8.28 0 0 0 4.81 1.54V7.17a4.84 4.84 0 0 1-1-.48z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigasi</h4>
+          <ul class="footer-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang-kami.html">Tentang Kami</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Layanan</h4>
+          <ul class="footer-menu">
+            <li><a href="layanan.html#jual-beli">Jual Beli Domba</a></li>
+            <li><a href="layanan.html#mitra-ternak">Mitra Ternak</a></li>
+            <li><a href="layanan.html#titip-ternak">Titip Ternak Domba</a></li>
+            <li><a href="layanan.html#daging-domba">Daging Domba</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Kontak Kami</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+62 812 3456 7890</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>info@dombastis.id</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Jombang, Jawa Timur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2025 Dombastis. All rights reserved.</div>
+        <div>Peternakan Domba, Solusi Masa Depan</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

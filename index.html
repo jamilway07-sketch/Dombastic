@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dombastis - Peternakan Domba Modern, Jual Beli & Mitra Ternak</title>
+  <meta name="description" content="Dombastis hadir untuk memenuhi kebutuhan domba berkualitas dengan layanan lengkap, amanah, dan profesional. Jual beli domba, mitra ternak, titip ternak, dan daging domba segar.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230F3E2E'/><path d='M35 40c0-10 12-12 15-4 3-8 15-6 15 4 0 14-15 28-15 28s-15-14-15-28z' fill='%23FFFFFF'/></svg>">
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Navigasi Utama">
+        <!-- Logo -->
+        <a href="index.html" class="brand-logo" aria-label="Dombastis Beranda">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" fill="#0F3E2E" stroke="#0F3E2E"/>
+              <path d="M7 11c1-3 3-4 5-4s4 1 5 4c0 3-2 6-5 6s-5-3-5-6z" fill="#FFFFFF" stroke="none"/>
+              <path d="M6 10c-1 0-2 1-2 2s1 2 2 2" stroke="#FFFFFF" stroke-width="1.5"/>
+              <path d="M18 10c1 0 2 1 2 2s-1 2-2 2" stroke="#FFFFFF" stroke-width="1.5"/>
+              <circle cx="10" cy="11" r="1" fill="#0F3E2E"/>
+              <circle cx="14" cy="11" r="1" fill="#0F3E2E"/>
+              <path d="M11 13c.5.5 1.5.5 2 0" stroke="#0F3E2E" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Dombastis</span>
+            <span class="brand-tagline">Peternakan Domba</span>
+          </div>
+        </a>
+
+        <!-- Desktop Menu Links -->
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Beranda</a></li>
+          <li><a href="tentang-kami.html" class="nav-link">Tentang Kami</a></li>
+          <li><a href="layanan.html" class="nav-link">Layanan</a></li>
+          <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+        </ul>
+
+        <!-- Right Header Actions -->
+        <div class="header-actions">
+          <button class="btn-search" id="openSearchBtn" aria-label="Buka Pencarian" title="Cari di Dombastis">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <a href="kontak.html" class="btn btn-header-cta">Hubungi Kami</a>
+          <button class="btn-hamburger" id="hamburgerBtn" aria-label="Menu Navigasi Mobile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" fill="#0F3E2E"/>
+            <path d="M7 11c1-3 3-4 5-4s4 1 5 4c0 3-2 6-5 6s-5-3-5-6z" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Dombastis</span>
+          <span class="brand-tagline">Peternakan Domba</span>
+        </div>
+      </div>
+      <button class="btn-close-drawer" id="closeDrawerBtn" aria-label="Tutup Menu">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="active">Beranda</a>
+      <a href="tentang-kami.html">Tentang Kami</a>
+      <a href="layanan.html">Layanan</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="blog.html">Blog</a>
+      <a href="kontak.html">Kontak & Lokasi</a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="kontak.html" class="btn btn-primary" style="width: 100%;">Hubungi Kami Sekarang</a>
+      <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center;">Jombang, Jawa Timur &bull; 0812-3456-7890</p>
+    </div>
+  </aside>
+
+  <!-- Search Modal -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-box">
+      <button class="search-modal-close" id="closeSearchBtn" aria-label="Tutup">&times;</button>
+      <div class="search-input-group">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Cari layanan, bibit domba, artikel..." autocomplete="off">
+      </div>
+      <div class="search-quick-tags">
+        <span>Pencarian Populer:</span>
+        <button type="button" class="search-tag-chip" data-query="dorper">Domba Dorper</button>
+        <button type="button" class="search-tag-chip" data-query="texel">Cross Texel</button>
+        <button type="button" class="search-tag-chip" data-query="mitra">Mitra Ternak</button>
+        <button type="button" class="search-tag-chip" data-query="titip">Titip Ternak</button>
+        <button type="button" class="search-tag-chip" data-query="daging">Daging Segar</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="beranda">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Text Content -->
+          <div class="hero-content">
+            <span class="hero-eyebrow">Dombastis – Solusi Terbaik untuk Kebutuhan Domba Anda</span>
+            <h1 class="hero-title">
+              Jual Beli Domba,<br>
+              Mitra Ternak, Titip Ternak<br>
+              & Daging Domba
+            </h1>
+            <p class="hero-lead">
+              Dombastis hadir untuk memenuhi kebutuhan domba berkualitas dengan layanan lengkap, amanah, dan profesional.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#layanan" class="btn btn-primary btn-lg">Lihat Layanan</a>
+              <a href="tentang-kami.html" class="btn btn-secondary btn-lg">Tentang Kami</a>
+            </div>
+
+            <!-- 3 Trust Points -->
+            <div class="hero-features">
+              <div class="hero-feature-item">
+                <div class="feature-icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M9 12l2 2 4-4"/>
+                  </svg>
+                </div>
+                <div class="feature-text">Domba Berkualitas & Sehat</div>
+              </div>
+
+              <div class="hero-feature-item">
+                <div class="feature-icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M8 12l2.5 2.5L16 9"></path>
+                  </svg>
+                </div>
+                <div class="feature-text">Transaksi Aman dan Terpercaya</div>
+              </div>
+
+              <div class="hero-feature-item">
+                <div class="feature-icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="feature-text">Pelayanan Profesional & Ramah</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Hero Image -->
+          <div class="hero-visual-wrapper">
+            <div class="hero-image-frame">
+              <img src="https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?auto=format&fit=crop&w=1200&q=80" 
+                   onerror="this.src='https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=1200&q=80'"
+                   alt="Peternakan Domba Dombastis Padang Rumput Hijau">
+            </div>
+            <!-- Handwritten script overlay in image top right -->
+            <div class="hero-script-badge">
+              Dari Peternakan untuk Masa Depan yang Lebih Baik
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Curved Swoosh Bottom -->
+      <div class="hero-swoosh-container" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none">
+          <path d="M0,25 C320,65 960,-15 1440,35 L1440,60 L0,60 Z" fill="#0F3E2E" opacity="0.95"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- SECTION: LAYANAN KAMI -->
+    <section class="section-layanan" id="layanan">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-left">
+            <span class="section-eyebrow">Layanan</span>
+            <h2 class="section-title">Layanan Kami</h2>
+            <p class="section-desc">
+              Dombastis menyediakan berbagai layanan untuk memenuhi kebutuhan peternak, mitra, dan konsumen dengan mudah dan aman.
+            </p>
+          </div>
+          <a href="layanan.html" class="view-all-link">Lihat Semua Layanan &rarr;</a>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1: Jual Beli Domba -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=800&q=80" alt="Jual Beli Domba Unggul">
+              <div class="service-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="service-card-content">
+              <h3 class="service-card-title">Jual Beli Domba</h3>
+              <p class="service-card-desc">Tersedia berbagai jenis domba berkualitas dengan harga terbaik.</p>
+              <a href="layanan.html#jual-beli" class="service-card-link">Pelajari Selengkapnya &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Card 2: Mitra Ternak -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&w=800&q=80" alt="Kemitraan Ternak Domba Modern">
+              <div class="service-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="service-card-content">
+              <h3 class="service-card-title">Mitra Ternak</h3>
+              <p class="service-card-desc">Bergabung menjadi mitra ternak dengan sistem yang saling menguntungkan.</p>
+              <a href="layanan.html#mitra-ternak" class="service-card-link">Pelajari Selengkapnya &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Card 3: Titip Ternak Domba -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1595433707802-6b2626ef1c91?auto=format&fit=crop&w=800&q=80" alt="Titip Perawatan Ternak Domba">
+              <div class="service-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="service-card-content">
+              <h3 class="service-card-title">Titip Ternak Domba</h3>
+              <p class="service-card-desc">Titipkan domba Anda dengan perawatan terbaik dan transparan.</p>
+              <a href="layanan.html#titip-ternak" class="service-card-link">Pelajari Selengkapnya &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Card 4: Daging Domba -->
+          <article class="service-card">
+            <div class="service-card-media">
+              <img src="https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=800&q=80" alt="Daging Domba Segar & Halal">
+              <div class="service-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="service-card-content">
+              <h3 class="service-card-title">Daging Domba</h3>
+              <p class="service-card-desc">Daging domba segar dan halal, untuk berbagai kebutuhan.</p>
+              <a href="layanan.html#daging-domba" class="service-card-link">Pelajari Selengkapnya &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: DOMBA PILIHAN BERKUALITAS (Dark Green Box) -->
+    <section class="section-breeds" id="jenis-domba">
+      <div class="container">
+        <div class="breeds-container-box">
+          <div class="breeds-header">
+            <div class="breeds-header-left">
+              <span class="breeds-eyebrow">— Jenis Domba</span>
+              <h2 class="breeds-title">Domba Pilihan Berkualitas</h2>
+            </div>
+            <p class="breeds-desc">
+              Kami menyediakan beberapa jenis domba unggulan dengan kualitas terbaik untuk Anda.
+            </p>
+          </div>
+
+          <div class="breeds-grid">
+            <!-- Breed 1: Dorper -->
+            <article class="breed-card">
+              <div class="breed-card-media">
+                <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=800&q=80" alt="Domba Dorper Unggul">
+                <div class="breed-icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                    <line x1="9" y1="9" x2="9.01" y2="9"/>
+                    <line x1="15" y1="9" x2="15.01" y2="9"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="breed-card-content">
+                <h3 class="breed-card-title">Dorper</h3>
+                <p class="breed-card-desc">Pertumbuhan cepat, daging tebal, cocok untuk penggemukan.</p>
+              </div>
+            </article>
+
+            <!-- Breed 2: Cross Texel -->
+            <article class="breed-card">
+              <div class="breed-card-media">
+                <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=800&q=80" alt="Domba Cross Texel">
+                <div class="breed-icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                    <line x1="9" y1="9" x2="9.01" y2="9"/>
+                    <line x1="15" y1="9" x2="15.01" y2="9"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="breed-card-content">
+                <h3 class="breed-card-title">Cross Texel</h3>
+                <p class="breed-card-desc">Kualitas daging premium, tahan penyakit, dan adaptif.</p>
+              </div>
+            </article>
+
+            <!-- Breed 3: Merino -->
+            <article class="breed-card">
+              <div class="breed-card-media">
+                <img src="https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?auto=format&fit=crop&w=800&q=80" alt="Domba Merino Bulu Tebal">
+                <div class="breed-icon-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                    <line x1="9" y1="9" x2="9.01" y2="9"/>
+                    <line x1="15" y1="9" x2="15.01" y2="9"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="breed-card-content">
+                <h3 class="breed-card-title">Merino</h3>
+                <p class="breed-card-desc">Dikenal dengan bulu berkualitas tinggi dan daya tahan yang baik.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: MENGAPA MEMILIH DOMBASTIS? -->
+    <section class="section-why-us">
+      <div class="container">
+        <div class="why-us-grid">
+          <!-- Left Image with Script Overlay -->
+          <div class="why-us-visual">
+            <div class="why-us-image-frame">
+              <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80" 
+                   alt="Peternakan Dombastis Terpercaya">
+            </div>
+            <div class="why-us-script-badge">
+              Bersama Dombastis<br>Tumbuh Lebih Kuat
+            </div>
+          </div>
+
+          <!-- Right Content & 4 Stat Cards -->
+          <div class="why-us-content">
+            <h2 class="why-us-title">Mengapa Memilih Dombastis?</h2>
+            <p class="why-us-desc">
+              Kami berkomitmen untuk memberikan yang terbaik dalam setiap layanan dan produk yang kami tawarkan.
+            </p>
+
+            <div class="stats-grid">
+              <!-- Stat 1 -->
+              <div class="stat-box">
+                <div class="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-value">100%</span>
+                  <span class="stat-label">Domba Sehat & Berkualitas</span>
+                </div>
+              </div>
+
+              <!-- Stat 2 -->
+              <div class="stat-box">
+                <div class="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-value">Ribuan</span>
+                  <span class="stat-label">Pelanggan Puas</span>
+                </div>
+              </div>
+
+              <!-- Stat 3 -->
+              <div class="stat-box">
+                <div class="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                  </svg>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-value">Pengalaman</span>
+                  <span class="stat-label">Bertahun-tahun di Bidang Peternakan</span>
+                </div>
+              </div>
+
+              <!-- Stat 4 -->
+              <div class="stat-box">
+                <div class="stat-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-value">Layanan</span>
+                  <span class="stat-label">Cepat & Terpercaya</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: TENTANG KAMI PREVIEW -->
+    <section class="section-about-preview">
+      <div class="container">
+        <div class="about-preview-grid">
+          <!-- Left Text Content -->
+          <div class="about-preview-content">
+            <span class="section-eyebrow">Tentang Kami</span>
+            <h2 class="about-preview-title">Dombastis, Lebih dari Sekadar Peternakan Domba</h2>
+            <p class="about-preview-desc">
+              Dombastis adalah peternakan domba yang berkomitmen untuk menyediakan domba berkualitas, layanan profesional, dan solusi terbaik bagi peternak maupun konsumen. Kami percaya bahwa peternakan yang maju adalah kunci untuk masa depan yang lebih baik.
+            </p>
+            <div>
+              <a href="tentang-kami.html" class="btn btn-primary">Selengkapnya &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Right Image with Floating Badge -->
+          <div class="about-preview-visual">
+            <div class="about-image-frame">
+              <img src="https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&w=1000&q=80" 
+                   alt="Fasilitas Kandang Domba Modern Dombastis">
+            </div>
+            <div class="about-floating-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+              <span>Domba Sehat Peternak Sejahtera</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: ARTIKEL TERBARU (BLOG) -->
+    <section class="section-articles">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-left">
+            <span class="section-eyebrow">Blog</span>
+            <h2 class="section-title">Artikel Terbaru</h2>
+            <p class="section-desc">
+              Dapatkan informasi, tips, dan insight seputar peternakan domba hanya di blog kami.
+            </p>
+          </div>
+          <a href="blog.html" class="view-all-link">Lihat Semua Artikel &rarr;</a>
+        </div>
+
+        <div class="articles-grid">
+          <!-- Article 1 -->
+          <article class="article-card">
+            <div class="article-media">
+              <img src="https://images.unsplash.com/photo-1484557052118-f32bd25b45b5?auto=format&fit=crop&w=800&q=80" alt="Cara Merawat Domba">
+              <span class="article-category-tag">Tips Peternakan</span>
+            </div>
+            <div class="article-content">
+              <h3 class="article-title">Cara Merawat Domba Agar Tetap Sehat dan Produktif</h3>
+              <div class="article-footer">
+                <span class="article-date">12 Oktober 2025</span>
+                <a href="blog.html" class="article-link">Baca Selengkapnya &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="article-card">
+            <div class="article-media">
+              <img src="https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&w=800&q=80" alt="Peluang Bisnis Domba">
+              <span class="article-category-tag">Info Usaha</span>
+            </div>
+            <div class="article-content">
+              <h3 class="article-title">Peluang Bisnis Domba di Tahun 2025</h3>
+              <div class="article-footer">
+                <span class="article-date">9 Oktober 2025</span>
+                <a href="blog.html" class="article-link">Baca Selengkapnya &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="article-card">
+            <div class="article-media">
+              <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=800&q=80" alt="Perbedaan Domba Dorper, Texel dan Merino">
+              <span class="article-category-tag">Edukasi</span>
+            </div>
+            <div class="article-content">
+              <h3 class="article-title">Perbedaan Dorper, Cross Texel, dan Merino</h3>
+              <div class="article-footer">
+                <span class="article-date">5 Oktober 2025</span>
+                <a href="blog.html" class="article-link">Baca Selengkapnya &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" fill="#0F3E2E"/>
+                <path d="M7 11c1-3 3-4 5-4s4 1 5 4c0 3-2 6-5 6s-5-3-5-6z" fill="#FFFFFF"/>
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">Dombastis</span>
+              <span class="brand-tagline">Peternakan Domba</span>
+            </div>
+          </a>
+          <p class="footer-about-text">
+            Dombastis hadir untuk menjadi mitra terbaik dalam pengembangan peternakan domba di Indonesia.
+          </p>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#0B3525"/></svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-btn" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.12V9.38a6.37 6.37 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.64a6.34 6.34 0 0 0 10.82 4.5 6.27 6.27 0 0 0 1.96-4.54V9.08a8.28 8.28 0 0 0 4.81 1.54V7.17a4.84 4.84 0 0 1-1-.48z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigasi -->
+        <div>
+          <h4 class="footer-title">Navigasi</h4>
+          <ul class="footer-menu">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang-kami.html">Tentang Kami</a></li>
+            <li><a href="layanan.html">Layanan</a></li>
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Layanan -->
+        <div>
+          <h4 class="footer-title">Layanan</h4>
+          <ul class="footer-menu">
+            <li><a href="layanan.html#jual-beli">Jual Beli Domba</a></li>
+            <li><a href="layanan.html#mitra-ternak">Mitra Ternak</a></li>
+            <li><a href="layanan.html#titip-ternak">Titip Ternak Domba</a></li>
+            <li><a href="layanan.html#daging-domba">Daging Domba</a></li>
+          </ul>
+        </div>
+
+        <!-- Kontak Kami -->
+        <div>
+          <h4 class="footer-title">Kontak Kami</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+62 812 3456 7890</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>info@dombastis.id</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Jombang, Jawa Timur</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>&copy; 2025 Dombastis. All rights reserved.</div>
+        <div>Peternakan Domba, Solusi Masa Depan</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
