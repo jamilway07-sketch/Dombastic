@@ -26,4 +26,4 @@ Catat pembukuan dari awal, sekecil apa pun skalanya.
 Mulai dari skala yang tidak bikin kamu panik kalau harga turun.
 Penutup
 Bisnis domba di 2026 itu bukan jalan pintas kaya, tapi juga bukan usaha yang sudah habis. Pasar kurban dan dam makin besar, sementara pasokan yang melimpah bikin persaingan harga ketat. Yang bertahan biasanya yang rapi soal biaya, punya pembeli sendiri, dan berani garap sisi hilirnya.
-Kalau kamu mau mulai, Dombastis siap jadi teman ngobrol soal bibit, kandang, sampai cara jualan. Kita mulai dari yang kecil dulu, yang penting jalan.
+Kalau kamu mau mulai, Peternakan Domba siap jadi teman ngobrol soal bibit, kandang, sampai cara jualan. Kita mulai dari yang kecil dulu, yang penting jalan.

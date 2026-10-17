@@ -1,5 +1,5 @@
 /**
- * DOMBASTIS - Main Interactive Scripts
+ * PETERNAKAN DOMBA - Main Interactive Scripts
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCalculator();
 
   // 7. Contact WhatsApp Form submit helper
-  const contactForm = document.getElementById('dombastisContactForm');
+  const contactForm = document.getElementById('dombastisContactForm') || document.getElementById('peternakanDombaContactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const layanan = document.getElementById('formLayanan').value;
       const pesan = document.getElementById('formPesan').value;
 
-      const waText = `Halo Dombastis, perkenalkan saya ${nama} (${telp}). Saya ingin bertanya mengenai ${layanan}. Pesan: ${pesan}`;
+      const waText = `Halo Peternakan Domba, perkenalkan saya ${nama} (${telp}). Saya ingin bertanya mengenai ${layanan}. Pesan: ${pesan}`;
       const waUrl = `https://wa.me/6287787502950?text=${encodeURIComponent(waText)}`;
       window.open(waUrl, '_blank');
     });
