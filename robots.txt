@@ -1,0 +1,11 @@
+# Robots.txt for Peternakan Domba
+# https://dombastis.id
+
+User-agent: *
+Allow: /
+
+# Block crawling of source control / internal directories
+Disallow: /.git/
+
+# XML Sitemap
+Sitemap: https://dombastis.id/sitemap.xml
