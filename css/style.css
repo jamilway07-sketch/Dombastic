@@ -2517,3 +2517,138 @@ h1, h2, h3, h4, h5, h6 {
     gap: 8px;
   }
 }
+
+/* ==========================================================================
+   Global Floating Actions: WhatsApp & Back to Top Button
+   ========================================================================== */
+.floating-actions {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  z-index: 990;
+  pointer-events: none;
+}
+
+.floating-actions > * {
+  pointer-events: auto;
+}
+
+/* Back to Top Button */
+.btn-floating-top {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--bg-surface, #ffffff);
+  color: var(--primary-deep, #0B3525);
+  border: 1.5px solid var(--border-light, #E2E8F0);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px) scale(0.9);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.2s ease,
+              color 0.2s ease,
+              box-shadow 0.2s ease,
+              border-color 0.2s ease;
+}
+
+.btn-floating-top svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.btn-floating-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.btn-floating-top:hover {
+  background: var(--primary-deep, #0B3525);
+  color: #FFFFFF;
+  border-color: var(--primary-deep, #0B3525);
+  box-shadow: 0 8px 24px rgba(11, 53, 37, 0.25);
+}
+
+.btn-floating-top:hover svg {
+  transform: translateY(-2px);
+}
+
+/* Floating WhatsApp Button */
+.btn-floating-wa {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #25D366;
+  color: #FFFFFF !important;
+  padding: 12px 18px 12px 14px;
+  border-radius: 50px;
+  text-decoration: none !important;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: -0.01em;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.42);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.2s ease;
+  animation: pulse-wa 2.5s infinite;
+}
+
+.btn-floating-wa svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.btn-floating-wa:hover {
+  background: #20ba5a;
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.55);
+}
+
+.floating-wa-label {
+  white-space: nowrap;
+}
+
+@keyframes pulse-wa {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 576px) {
+  .floating-actions {
+    bottom: 20px;
+    right: 18px;
+    gap: 10px;
+  }
+  .btn-floating-wa {
+    padding: 13px;
+    border-radius: 50%;
+  }
+  .btn-floating-wa svg {
+    width: 26px;
+    height: 26px;
+  }
+  .floating-wa-label {
+    display: none;
+  }
+  .btn-floating-top {
+    width: 44px;
+    height: 44px;
+  }
+}
+

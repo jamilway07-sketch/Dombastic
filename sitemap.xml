@@ -4,12 +4,12 @@
 
   <!-- Beranda / Homepage -->
   <url>
-    <loc>https://dombastis.id/</loc>
+    <loc>https://peternakandomba.web.id/</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://dombastis.id/image/logo%20dombastis.jpg</image:loc>
+      <image:loc>https://peternakandomba.web.id/image/logo%20dombastis.jpg</image:loc>
       <image:title>Peternakan Domba - House of Sheep</image:title>
       <image:caption>Logo Resmi Peternakan Domba Modern Nganjuk</image:caption>
     </image:image>
@@ -17,12 +17,12 @@
 
   <!-- Tentang Kami -->
   <url>
-    <loc>https://dombastis.id/tentang-kami.html</loc>
+    <loc>https://peternakandomba.web.id/tentang-kami.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://dombastis.id/image/domba1.jpg</image:loc>
+      <image:loc>https://peternakandomba.web.id/image/domba1.jpg</image:loc>
       <image:title>Profil Peternakan Domba</image:title>
       <image:caption>Fasilitas kandang dan pembibitan Peternakan Domba di Nganjuk</image:caption>
     </image:image>
@@ -30,17 +30,17 @@
 
   <!-- Layanan Peternakan -->
   <url>
-    <loc>https://dombastis.id/layanan.html</loc>
+    <loc>https://peternakandomba.web.id/layanan.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://dombastis.id/image/domba2.jpg</image:loc>
+      <image:loc>https://peternakandomba.web.id/image/domba2.jpg</image:loc>
       <image:title>Layanan Jual Beli dan Kemitraan Ternak Domba</image:title>
       <image:caption>Program mitra ternak bagi hasil dan titip ternak domba</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://dombastis.id/image/daging1%20(1).jpeg</image:loc>
+      <image:loc>https://peternakandomba.web.id/image/daging1%20(1).jpeg</image:loc>
       <image:title>Layanan Daging Domba Segar</image:title>
       <image:caption>Suplai daging domba segar higienis untuk kurban, aqiqah, dan resto</image:caption>
     </image:image>
@@ -48,17 +48,17 @@
 
   <!-- Galeri Dokumentasi Farm -->
   <url>
-    <loc>https://dombastis.id/galeri.html</loc>
+    <loc>https://peternakandomba.web.id/galeri.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
-      <image:loc>https://dombastis.id/image/domba3.jpg</image:loc>
+      <image:loc>https://peternakandomba.web.id/image/domba3.jpg</image:loc>
       <image:title>Galeri Domba Unggul</image:title>
       <image:caption>Dokumentasi domba bibit Dorper dan Texel pilihan</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://dombastis.id/image/domba4.jpg</image:loc>
+      <image:loc>https://peternakandomba.web.id/image/domba4.jpg</image:loc>
       <image:title>Kandang Modern Peternakan Domba</image:title>
       <image:caption>Manajemen sanitasi dan pakan peternakan domba modern</image:caption>
     </image:image>
@@ -66,7 +66,7 @@
 
   <!-- Blog & Artikel Edukasi -->
   <url>
-    <loc>https://dombastis.id/blog.html</loc>
+    <loc>https://peternakandomba.web.id/blog.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -74,12 +74,12 @@
 
   <!-- Artikel: Peluang Bisnis Domba 2026 -->
   <url>
-    <loc>https://dombastis.id/peluang-bisnis-domba-2026.html</loc>
+    <loc>https://peternakandomba.web.id/peluang-bisnis-domba-2026.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://dombastis.id/image/domba5.jpg</image:loc>
+      <image:loc>https://peternakandomba.web.id/image/domba5.jpg</image:loc>
       <image:title>Peluang Bisnis Domba 2026: Masih Cuan, Asal Tahu Mainnya</image:title>
       <image:caption>Panduan analisis pasar, kurban, dam haji, dan strategi cashflow ternak domba 2026</image:caption>
     </image:image>
@@ -87,12 +87,12 @@
 
   <!-- Kontak & Lokasi Farm -->
   <url>
-    <loc>https://dombastis.id/kontak.html</loc>
+    <loc>https://peternakandomba.web.id/kontak.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://dombastis.id/image/domba6.jpg</image:loc>
+      <image:loc>https://peternakandomba.web.id/image/domba6.jpg</image:loc>
       <image:title>Kunjungan Peternakan Domba Nganjuk</image:title>
       <image:caption>Alamat kandang dan pusat konsultasi kemitraan di Nganjuk, Jawa Timur</image:caption>
     </image:image>

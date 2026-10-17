@@ -1,5 +1,5 @@
 # Robots.txt for Peternakan Domba
-# https://dombastis.id
+# https://peternakandomba.web.id
 
 User-agent: *
 Allow: /
@@ -8,4 +8,4 @@ Allow: /
 Disallow: /.git/
 
 # XML Sitemap
-Sitemap: https://dombastis.id/sitemap.xml
+Sitemap: https://peternakandomba.web.id/sitemap.xml
