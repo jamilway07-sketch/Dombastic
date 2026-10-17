@@ -188,8 +188,53 @@ document.addEventListener('DOMContentLoaded', () => {
       const pesan = document.getElementById('formPesan').value;
 
       const waText = `Halo Dombastis, perkenalkan saya ${nama} (${telp}). Saya ingin bertanya mengenai ${layanan}. Pesan: ${pesan}`;
-      const waUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(waText)}`;
+      const waUrl = `https://wa.me/6287787502950?text=${encodeURIComponent(waText)}`;
       window.open(waUrl, '_blank');
     });
+  }
+
+  // 8. Testimonials Slider Controls
+  const testiTrack = document.getElementById('testiTrack');
+  const testiPrevBtn = document.getElementById('testiPrevBtn');
+  const testiNextBtn = document.getElementById('testiNextBtn');
+  const testiDots = document.querySelectorAll('.testi-dot');
+
+  if (testiTrack) {
+    const viewport = testiTrack.parentElement;
+
+    const getCardWidth = () => {
+      const card = testiTrack.querySelector('.testi-card');
+      return card ? card.offsetWidth + 24 : 340;
+    };
+
+    if (testiPrevBtn) {
+      testiPrevBtn.addEventListener('click', () => {
+        viewport.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+      });
+    }
+
+    if (testiNextBtn) {
+      testiNextBtn.addEventListener('click', () => {
+        viewport.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+      });
+    }
+
+    testiDots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const index = parseInt(dot.dataset.index) || 0;
+        viewport.scrollTo({ left: index * getCardWidth(), behavior: 'smooth' });
+      });
+    });
+
+    viewport.addEventListener('scroll', () => {
+      const cardWidth = getCardWidth();
+      const activeIndex = Math.min(
+        testiDots.length - 1,
+        Math.max(0, Math.round(viewport.scrollLeft / cardWidth))
+      );
+      testiDots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === activeIndex);
+      });
+    }, { passive: true });
   }
 });
