@@ -85,6 +85,19 @@
     </image:image>
   </url>
 
+  <!-- Artikel: Perbedaan Karakter Domba Dorper, Cross Texel, dan Merino -->
+  <url>
+    <loc>https://peternakandomba.web.id/perbedaan-karakter-domba-dorper-cross-texel-dan-merino.html</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://peternakandomba.web.id/image/domba2.jpg</image:loc>
+      <image:title>Perbedaan Karakter Domba Dorper, Cross Texel, dan Merino</image:title>
+      <image:caption>Panduan komparatif ras domba unggul Dorper, Cross Texel, dan Merino untuk peternak modern</image:caption>
+    </image:image>
+  </url>
+
   <!-- Kontak & Lokasi Farm -->
   <url>
     <loc>https://peternakandomba.web.id/kontak.html</loc>
